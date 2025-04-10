@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Meow Facts & Cat Images</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjihMqKlI4fLZQeFYHIAOJI7SIRdXqYlv3y63vHekNBO6GCK9bUYn3dBOusjoctjfHKdweOS5bx1GmQddumvYqOQ5tJzZ7Dam34YXy87DlQ-h2DLXugQMVcjHWlcNqQBBualJjPpbTuS7Y/s1880/kucing.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(250, 248, 248);
+            text-align: center;
+            padding: 0;
+            padding-top: 50px;
+        }
+
+        .contact-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        .contact-info {
+            margin: 15px 0;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+         <ul id="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gif.html">GIF</a></li>
+            <li><a href="image.html">Images</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Contact Us</h1>
+
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="tel:081223470382">081223470382</a></p>
+            <p><strong>Email:</strong> <a href="mailto:faizdaffa282004@gmail.com">faizdaffa282004@gmail.com</a></p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

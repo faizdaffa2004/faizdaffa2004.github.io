@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow Facts & Cat Images</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjihMqKlI4fLZQeFYHIAOJI7SIRdXqYlv3y63vHekNBO6GCK9bUYn3dBOusjoctjfHKdweOS5bx1GmQddumvYqOQ5tJzZ7Dam34YXy87DlQ-h2DLXugQMVcjHWlcNqQBBualJjPpbTuS7Y/s1880/kucing.jpeg');
+            background-size: contain;
+            background-position: center;
+            color: rgb(250, 248, 248);
+            text-align: left justify;
+            align-items: baseline;
+            padding-left: 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gif.html">GIF</a></li>
+            <li><a href="image.html">Images</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Random Cat Images</h1>
+    <div id="cat-images" style="display: flex; flex-wrap: wrap; gap: 10px;"></div>
+    <button onclick="fetchCatImages()">Load More Images</button>
+    
+    <script>
+         async function fetchCatImages(count = 4) {
+            const catImagesContainer = document.getElementById("cat-images");
+            catImagesContainer.innerHTML = ""; // Clear previous images
+            
+            for (let i = 0; i < count; i++) {
+                try {
+                    const response = await fetch("https://cataas.com/cat?type=square&timestamp=" + new Date().getTime());
+                    const blob = await response.blob();
+                    const imgURL = URL.createObjectURL(blob);
+                    
+                    const img = document.createElement("img");
+                    img.src = imgURL;
+                    img.alt = "Random Cat";
+                    img.width = 150;
+                    img.height = 150;
+                    img.style.borderRadius = "10px";
+                    catImagesContainer.appendChild(img);
+                } catch (error) {
+                    console.error("Error fetching image:", error);
+                }
+            }
+        }
+        fetchCatImages();
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

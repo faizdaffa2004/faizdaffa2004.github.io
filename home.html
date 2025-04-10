@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow Facts & Cat Images</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjihMqKlI4fLZQeFYHIAOJI7SIRdXqYlv3y63vHekNBO6GCK9bUYn3dBOusjoctjfHKdweOS5bx1GmQddumvYqOQ5tJzZ7Dam34YXy87DlQ-h2DLXugQMVcjHWlcNqQBBualJjPpbTuS7Y/s1880/kucing.jpeg');
+            background-size: contain;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gif.html">GIF</a></li>
+            <li><a href="image.html">Images</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <p class="cat-quote">"Behind every cute cat photo is a master of naps, curiosity, and mischief."</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
